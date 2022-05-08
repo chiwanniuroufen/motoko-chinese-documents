@@ -17,3 +17,20 @@
 ## 可以学到什么 ？
 
 > `Motoko` 目前没有中文开发文档和详细的教程，因此整理出中文开发文档，方便于对 `ic` 开发感兴趣的开发者，或者是刚入门的开发人员或新手进行学习与交流，利于 `Dfinity` 生态建设，为即将到来的 `Web3` 做好准备，你是否也想开发出令人激动的 `Dapp` ？ 那就一起！
+
+## 准备
+* 安装 `Dfinity` SDK ( Mac/Linux 用户 )
+
+```
+sh -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
+```
+
+* 查看版本
+
+```
+dfx --version
+```
+
+* 安装 `Node.js` 
+
+> 进入官网下载 [Node.js官网](https://www.runoob.com), 建议下载稳定版安装
