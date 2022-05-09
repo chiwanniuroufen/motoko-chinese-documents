@@ -2,8 +2,9 @@
 
 
 
-![banner](https://smartcontracts.org/img/IC_logo_horizontal.svg)
-
+<p style="text-align: center; width: 400px">
+    <img src="https://smartcontracts.org/img/IC_logo_horizontal.svg" />
+</p>
 
 
 ## 什么是 Motoko ?
@@ -34,3 +35,89 @@ dfx --version
 * 安装 `Node.js` 
 
 > 进入官网下载 [Node.js官网](https://www.runoob.com), 建议下载稳定版安装
+
+## 注释
+
+// 单行注释
+
+/* 多行注释 */
+
+## 变量
+Motoko 中分为可变变量 `var`  、常量 `let`
+
+> 可重新赋值
+```
+var count = 1
+count := 2  // success
+```
+
+> 不可重新赋值
+```
+let count = 1
+count := 2  // error 
+```
+
+## 数据类型
+
+文本  `Text, Char`
+
+```
+var flag : Char = '\u{6a}'
+var message : Text = "hello，world";
+```
+
+数字  `Nat8, Nat16, Nat32, Nat64, Int8, Int16, Int32, Int64`
+
+```
+var age : Nat = 24;  // 默认Nat为Nat16
+age := -1; // error
+```
+
+```
+var age : int = 24;  // 默认Int为Int16
+age := -1; // success
+```
+
+浮点数 `Float`
+
+```
+var balance : Float = 100.999
+balance := -100.999
+```
+
+布尔 `Bool`
+
+```
+var flag : Bool = true
+flag: Bool = false
+```
+
+元祖 `(Bool, Float, Text)`
+
+```
+let tuple = (true or false, 0.6 * 2.0, "foo" # "bar");
+```
+
+Options `?Text`
+
+```
+func display (x : ?Text) : () {
+  switch x {
+    case (null) { ignore "No value" };
+    case (?y) { ignore "Value1: " # y };
+  };
+};
+
+display(null)
+display(?"Test")
+
+```
+
+数组 `[Text], [var Nat]`
+
+```
+可变数组
+let counters = [var 1, 2, 3];
+
+assert(counters.size() == 3);
+```
