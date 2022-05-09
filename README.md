@@ -104,7 +104,7 @@ Options `?Text`
 func display (x : ?Text) : () {
   switch x {
     case (null) { ignore "No value" };
-    case (?y) { ignore "Value1: " # y };
+    case (?y) { ignore "Value: " # y };
   };
 };
 
@@ -118,6 +118,15 @@ display(?"Test")
 ```
 可变数组
 let counters = [var 1, 2, 3];
+counters[0] := 2; // success
 
-assert(counters.size() == 3);
+不可变数组
+let counters = [1, 2, 3];
+counters[0] := 2; // error
+```
+
+Records `{first : Text; last : Text; salary : var Nat}`
+
+```
+let employee = { first = "John"; last = "Doe"; var salary = 12 };
 ```
