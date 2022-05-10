@@ -138,12 +138,34 @@ let employee = { first = "John"; last = "Doe"; var salary = 12 };
 **结构体** 
 
 ```
-    type Person = {
-        name: Text;
-        age: Nat
-    };
-    let xiaoming : Person = {
-        name = "小明";
-        age = 33;
-    };
+type Person = {
+    name: Text;
+    age: Nat
+};
+let xiaoming : Person = {
+    name = "小明";
+    age = 33;
+};
+```
+
+## 流程控制
+
+`if {} else {}`
+
+```
+let a : Text = "Motoko"
+if (a == "Motoko") {
+  return "hello, Motoko"
+} else {
+  return ""
+}
+```
+
+`for...in`
+
+```
+let arr : [Nat] = [1, 2, 3];
+for (i in arr.vals()) {
+    Debug.print(Nat.toText(i));
+}
 ```
