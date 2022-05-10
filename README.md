@@ -129,8 +129,21 @@ let counters = [1, 2, 3];
 counters[0] := 2; // error
 ```
 
-**Records** `{first : Text; last : Text; salary : var Nat}`
+**Records**  `{first : Text; last : Text; salary : var Nat}`
 
 ```
 let employee = { first = "John"; last = "Doe"; var salary = 12 };
+```
+
+**结构体** 
+
+```
+    type Person = {
+        name: Text;
+        age: Nat
+    };
+    let xiaoming : Person = {
+        name = "小明";
+        age = 33;
+    };
 ```
